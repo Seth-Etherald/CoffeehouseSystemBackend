@@ -1,10 +1,5 @@
 ﻿using CoffeehouseLibrary.DTO;
 using CoffeehouseLibrary.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CoffeehouseLibrary.DAL
 {
@@ -21,6 +16,16 @@ namespace CoffeehouseLibrary.DAL
         public List<Account> GetAccounts()
         {
             return _context.Accounts.ToList();
+        }
+
+        public int? GetAccountId(string username)
+        {
+            Account? account = _context.Accounts.FirstOrDefault(account => account.Username.Equals(username));
+            if (account != null)
+            {
+                return account.AccountId;
+            }
+            return null;
         }
 
         public AccountStatus? GetAccountStatus(Login login)
