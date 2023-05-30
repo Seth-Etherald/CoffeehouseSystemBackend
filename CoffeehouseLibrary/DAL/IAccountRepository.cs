@@ -7,6 +7,8 @@ namespace CoffeehouseLibrary.DAL
     {
         List<Account> GetAccounts();
 
+        int? GetAccountId(string username);
+
         AccountStatus? GetAccountStatus(Login login);
 
         int Login(Login login);
