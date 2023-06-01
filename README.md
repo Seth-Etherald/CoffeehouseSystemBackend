@@ -4,3 +4,5 @@ DO NOT push to main branch unless it's something completely inconsequential (lik
 Always code on another branch then create a pull request.
 
 Branch name doesn't really matter.
+
+Merged into https://github.com/JamePhan/Coffee-information-and-service
